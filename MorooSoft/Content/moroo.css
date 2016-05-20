@@ -5,9 +5,35 @@
 .moroo-container {
     color:#333;
 }
-
 .moroo-navbar-toggle {
     float: left;
     margin-right: 0px;
     margin-left: 15px;
+}
+
+@media (max-width: 767px) {
+    .moroo-navbar-brand {
+        margin: 0 auto;
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%, 0%);
+  }
+}
+.moroo-navbar-brand {
+    margin-left: 0px !important;
+}
+.moroo-main {
+    position: relative;
+    height: 200px;
+}
+.moroo-center {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+.moroo-width-center {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 0%);
 }
