@@ -40,6 +40,9 @@
 .moroo-padding-0 {
     padding: 0px;
 }
+.moroo-padding-5 {
+    padding: 5px;
+}
 .moroo-margin-0 {
     margin: 0px;
 }
@@ -48,4 +51,7 @@
 }
 .moroo-margin-top-30 {
     margin-top: 30px;
+}
+.moroo-footer {
+    text-align: right;
 }
