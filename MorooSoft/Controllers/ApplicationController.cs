@@ -17,21 +17,21 @@ namespace MorooSoft.Controllers
 
         public ActionResult HostManager(String version)
         {
-            String path = Request.PhysicalApplicationPath + "/Files/HostManager/64Bit/HostManager.exe";
+            String path = Request.PhysicalApplicationPath + "/Files/HostManager/64Bit/HostManager_64Bit.exe";
             FileVersionInfo myFI = FileVersionInfo.GetVersionInfo(path);
             
             if (version != null)
             {
                 if (version == "64")
                 {
-                    path = Request.PhysicalApplicationPath + "/Files/HostManager/64Bit/HostManager.exe";
+                    path = Request.PhysicalApplicationPath + "/Files/HostManager/64Bit/HostManager_64Bit.exe";
                     myFI = FileVersionInfo.GetVersionInfo(path);
 
                     return Json(new { version = myFI.FileVersion }, JsonRequestBehavior.AllowGet);
                 }
                 else if (version == "32")
                 {
-                    path = Request.PhysicalApplicationPath + "/Files/HostManager/32Bit/HostManager.exe";
+                    path = Request.PhysicalApplicationPath + "/Files/HostManager/32Bit/HostManager_32Bit.exe";
                     myFI = FileVersionInfo.GetVersionInfo(path);
 
                     return Json(new { version = myFI.FileVersion }, JsonRequestBehavior.AllowGet);
