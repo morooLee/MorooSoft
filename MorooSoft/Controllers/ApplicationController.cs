@@ -20,22 +20,9 @@ namespace MorooSoft.Controllers
             String path = Request.PhysicalApplicationPath + "/Files/HostManager/HostManager.exe";
             FileVersionInfo myFI = FileVersionInfo.GetVersionInfo(path);
             
-            if (version != null)
+            if (version != null && version == "Check")
             {
-                if (version == "64")
-                {
-                    path = Request.PhysicalApplicationPath + "/Files/HostManager/HostManager.exe";
-                    myFI = FileVersionInfo.GetVersionInfo(path);
-
-                    return Json(new { version = myFI.FileVersion }, JsonRequestBehavior.AllowGet);
-                }
-                else if (version == "32")
-                {
-                    path = Request.PhysicalApplicationPath + "/Files/HostManager/HostManager.exe";
-                    myFI = FileVersionInfo.GetVersionInfo(path);
-
-                    return Json(new { version = myFI.FileVersion }, JsonRequestBehavior.AllowGet);
-                }
+                return Json(new { version = myFI.FileVersion }, JsonRequestBehavior.AllowGet);
             }
             else
             {
